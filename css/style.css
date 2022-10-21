@@ -1,0 +1,307 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+*
+{
+      box-sizing: border-box;
+      font-family: 'Fuzzy Bubbles', cursive;
+}
+:root
+{
+      --main-font-color:rgb(13 187 237);
+      --background-color:#302f2f;
+      --form-ground:#222;
+}
+
+label.title
+{
+      margin: 20px auto;
+      font-size: 20px;
+      color: var(--main-font-color);
+      font-weight: bold;
+}
+
+section
+{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 100vh;
+      background-color: var(--background-color);
+}
+
+section form
+{
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      background-color: var(--form-ground);
+      border-radius: 10px;
+      box-shadow: 1px 1px 2px 2px #221f1f;
+      flex-wrap: wrap;
+      position: relative;
+}
+
+
+
+section form::before
+{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-font-color);
+      border-radius: 10px;
+      animation: border 10s infinite linear;
+}
+
+section form::after
+{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-font-color);
+      border-radius: 10px;
+      animation: border 10s  infinite linear;
+}
+
+section form input
+{
+      padding: 15px 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      transition: 0.3s;
+      position: relative;
+      background-color: #221f1f;
+      outline: none;
+      border-color: transparent;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #777;
+}
+
+section form input::selection
+{
+      background-color: #221f1f ;
+      color: #777;
+}
+
+section form input:focus
+{
+      border: 2px solid var(--main-font-color);
+      color: var(--main-font-color);
+}
+
+section form input::placeholder
+{
+      z-index: 2;
+}
+
+section form input:focus::placeholder
+{
+      color: var(--main-font-color);
+      transform: translateY(-30px);
+      transition: 1.5s;
+}
+
+.check
+{
+      display: flex;
+      justify-content: center;
+}
+
+.check label
+{
+      color: #777;
+      margin-left: 10px;
+}
+
+.check input[type=checkbox]
+{  
+    border-color: transparent;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--main-font-color);
+    transition: 0.3s;
+}
+
+.check input[type=checkbox]:checked +label
+{
+      color: var(--main-font-color);
+      transition: 0.5s;
+}
+
+
+.sub
+{
+      display: flex;
+      justify-content: center;
+}
+ a
+{
+      width: fit-content;
+      display: block;
+      margin: 20px auto;
+      color: #777;
+      padding: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.5s;
+      height: 40px;
+}
+
+ a:hover
+{
+      color: var(--main-font-color);
+      transition: 0.5s;
+      border: 1px solid var(--main-font-color);
+}
+
+::-webkit-scrollbar
+{
+      background-color: #302f2f;
+      width: 5px;
+}
+
+::-webkit-scrollbar-thumb
+{
+      background-color: var(--main-font-color);
+      border-radius: 10px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;    
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--main-font-color);
+}
+
+input:-webkit-autofill:focus {  
+    -webkit-text-fill-color: var(--main-font-color);
+} 
+@keyframes border {
+      0%
+      {
+            width: 0
+      }
+      100%
+      {
+            width: 100%;
+      }
+}
+
+
+/*landing.html*/
+section.landing
+{
+      display: flex;
+}
+
+section.landing .text
+{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--form-ground);
+      padding: 50px;
+      margin: 20px;
+      box-shadow: 1px 1px 2px 2px #221f1f;
+      border-radius: 10px;
+      flex-wrap: wrap;
+      position: relative;
+      width: 400px;
+      height: 200px;
+}
+
+section.landing .text::before
+{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-font-color);
+      border-radius: 10px;
+      animation: border 10s infinite linear;
+}
+
+section.landing .text::after
+{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-font-color);
+      border-radius: 10px;
+      animation: border 10s infinite linear;
+      color: var(--main-font-color);
+}
+
+section.landing .text a
+{
+      color: var(--main-font-color);
+      display: flex;
+      transition: 0.3s;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      flex-wrap: wrap;
+      border: none;
+}
+
+/*thanks.html*/
+section.thanks .thank
+{
+      display: flex;
+      width: 500px;
+      height: 200px;
+      flex-wrap: wrap;
+      text-align: center;
+      background-color: var(--form-ground);
+      border-radius: 10px;
+      color: var(--main-font-color);
+      margin: 20px;
+      position: relative;
+}
+
+section.thanks .thank::before
+{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-font-color);
+      border-radius: 10px;
+      animation: border 10s infinite linear;
+}
+
+section.thanks .thank::after
+{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-font-color);
+      border-radius: 10px;
+      animation: border 10s infinite linear;
+      color: var(--main-font-color);
+}
